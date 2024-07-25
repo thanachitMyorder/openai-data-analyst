@@ -153,6 +153,7 @@ async def process_files(files: List[Element]):
     file_ids = []
     if len(files) > 0:
         file_ids = await upload_files(files)
+        print("Using code_interpreter")
 
     return [
         {
@@ -161,6 +162,7 @@ async def process_files(files: List[Element]):
         }
         for file_id, file in zip(file_ids, files)
     ]
+    
 
 
 @cl.set_starters
