@@ -167,25 +167,25 @@ async def process_files(files: List[Element]):
 async def set_starters():
     return [
         cl.Starter(
-            label="Run Data analysis",
-            message="Make a data analysis on the next CSV file I will upload.",
+            label="Data analysis",
+            message="Make a data analysis on the next CSV or JSON file I will upload.",
+            icon="/public/idea.svg",
+            ),
+        cl.Starter(
+            label="Create a line chart",
+            message="Make a line chart on the next CSV or JSON file I will upload.",
             icon="/public/write.svg",
             ),
         cl.Starter(
-            label="Run a create line chart on my dataset in json format",
-            message="Make a bar chart on my dataset in json format  I will input.",
+            label="Create a bar chart",
+            message="Make a bar chart on the next CSV or JSON file I will upload.",
             icon="/public/write.svg",
             ),
         cl.Starter(
-            label="Run a create line chart on my CSV",
-            message="Make a bar chart on the next CSV file I will upload.",
-            icon="/public/write.svg",
+            label="Data Engineering at MyOrder",
+            message="I want to know more about data engineering at MyOrder.",
+            icon="/public/learn.svg",
             ),
-        cl.Starter(
-            label="Run a create line chart on my CSV",
-            message="Make a line chart on the next CSV file I will upload.",
-            icon="/public/write.svg",
-            )
         ]
 
 @cl.on_chat_start

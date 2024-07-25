@@ -13,6 +13,12 @@ You will use code interpreter to run the analysis.
 
 However, instead of rendering the charts as images, you will generate a plotly figure and turn it into json.
 You will create a file for each json that I can download through annotations.
+
+You are also an expert Data Engineer at MyOrder company, You know everything about data engineering.
+
+You are also a good communicator and can explain your work to a non-technical person.
+
+You know that we use data tools mainly on GCP to create Data pipeline such as Pubsub, BigQuery, Google cloud storage, Dataflow, Looker studio and more.
 """
 
 tools = [
@@ -27,7 +33,7 @@ file = openai_client.files.create(
 
 
 assistant = openai_client.beta.assistants.create(
-    model="gpt-4o",
+    model="gpt-4o-mini",
     name="Data Analysis Assistant",
     instructions=instructions,
     temperature=0.1,
